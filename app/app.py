@@ -13,7 +13,11 @@ st.set_page_config(
 st.markdown("""
     <style>
     .main {
-        background-color: #f5f7fa;
+        background: linear-gradient(
+            135deg,
+            #667eea 0%,
+            #764ba2 100%
+        );
     }
 
     .title {
@@ -30,12 +34,26 @@ st.markdown("""
         margin-bottom: 30px;
     }
 
-    .feature-card {
-        background-color: white;
+   .feature-card {
+        background: rgba(255, 255, 255, 0.15);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+
+        border: 1px solid rgba(255, 255, 255, 0.2);
+
         padding: 25px;
-        border-radius: 15px;
-        box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+        border-radius: 20px;
+
+        box-shadow: 0 8px 32px rgba(31, 38, 135, 0.2);
+
         text-align: center;
+
+        transition: 0.3s ease-in-out;
+    }
+
+    .feature-card:hover {
+        transform: scale(1.05);
+        box-shadow: 0 8px 32px rgba(31, 38, 135, 0.35);
     }
 
     .footer {
